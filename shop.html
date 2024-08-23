@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/tiny-slider.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+
+    <link href="css/style.css" rel="stylesheet">
+    <title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co</title>
+
+    <style>
+/* Footer Styles */
+.footer {
+    background-color: black; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 40px 0; /* Increased padding for better spacing */
+}
+
+.footer-logo-wrap .footer-logo {
+    font-size: 1.75rem; /* Slightly larger font size for the logo */
+    font-weight: bold;
+    color: #333; /* Darker color for better contrast */
+}
+
+.footer-logo-wrap .footer-logo span {
+    color: #e18282; /* Accent color */
+}
+
+.footer p {
+    font-size: 0.875rem; /* Slightly smaller font size for the paragraph */
+    color: #666; /* Lighter text color */
+}
+
+.custom-social a {
+    color: #333; /* Dark color for social icons */
+    font-size: 1.25rem; /* Larger icons */
+    margin-right: 10px; /* Spacing between icons */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.custom-social a:hover {
+    color: #e18282; /* Accent color on hover */
+}
+
+.links-wrap ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.links-wrap ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+.links-wrap ul li a {
+    color: #333; /* Dark color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.links-wrap ul li a:hover {
+    color: #e18282; /* Accent color on hover */
+}
+
+.border-top {
+    border-top: 1px solid #ddd; /* Light border for separation */
+    padding-top: 20px;
+}
+
+.copyright p {
+    font-size: 0.875rem;
+    color: #666; /* Lighter text color */
+    margin-bottom: 0;
+}
+
+.copyright a {
+    color: #333; /* Dark color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.copyright a:hover {
+    color: #e18282; /* Accent color on hover */
+}
+
+@media (max-width: 767px) {
+    .footer-logo-wrap .footer-logo {
+        font-size: 1.5rem; /* Smaller font size on smaller screens */
+    }
+
+    .custom-social a {
+        font-size: 1.1rem; /* Smaller icons on smaller screens */
+    }
+}
+
+/* Tiny Slider Styles */
+.tiny-slider-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+.tiny-slider {
+    text-align: center; /* Center align slider items */
+}
+
+.tiny-slider .product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 0 auto;
+    display: inline-block; /* Centering items */
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.tns-item {
+    display: flex;
+    justify-content: center; /* Center the item in slider */
+}
+
+.tns-item img {
+    max-width: 80%; /* Adjust as needed */
+}
+
+/* Custom Slider Navigation */
+.custom-prev, .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.custom-prev {
+    left: 10px; /* Space from the left edge */
+}
+
+.custom-next {
+    right: 10px; /* Space from the right edge */
+}
+
+.custom-play-pause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.tns-controls {
+    display: none; /* Hide default navigation */
+}
+
+/* Additional Styles */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1rem; /* Adjust font size if needed */
+}
+
+.logo-icon {
+    margin-right: 10px; /* Adjust spacing between logo and text */
+    width: 370px; /* Adjust logo size if needed */
+}
+
+.house-of-furniture {
+    display: block;
+    font-size: 0.9rem; /* Adjust font size if needed */
+    color: #e18282; /* Adjust text color if needed */
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #040507; /* Adjust background color if needed */
+}
+
+.hero-img-wrap img {
+    max-width: 100%;
+    height: auto;
+    margin-top: -85px;
+}
+
+.product-section .card-img-top {
+    max-width: 100%;
+    height: auto;
+}
+
+.we-help-section .imgs-grid {
+    display: flex;
+    gap: 10px; /* Adjust spacing between images if needed */
+}
+
+.we-help-section .imgs-grid .grid {
+    flex: 1;
+}
+
+.hero-img-wrap {
+    margin-bottom: -100px;
+    margin-left: 500px;
+}
+
+.col-lg-7 {
+    margin-left: 5px;
+    max-width: 900px;
+    align-content: flex-start;
+}
+
+  .tiny-slider-container {
+    position: relative; /* Ensure buttons are positioned relative to the slider container */
+  }
+
+  .my-slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .tns-prev, .tns-next {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .tns-prev:hover, .tns-next:hover {
+    background-color: #0056b3;
+  }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Pak Global Trades navigation bar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png.png" alt="Pak Global Trades Logo" class="logo-icon" width="150px"> 
+                
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li><a class="nav-link" href="about.html">About Us</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                  
+                    <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" href="#"><img src="images/user.svg" alt="User Icon"></a></li>
+                    <li><a class="nav-link" href="cart.html"><img src="images/cart.svg" alt="Cart Icon"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Header/Navigation -->
+
+    <!-- Start Hero Section -->
+   <!-- Start Hero Section -->
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1>Shop</h1>
+                    <div class="col-lg-7">
+                        <div class="hero-img-wrap">
+                            <img src="images/couch.png" class="img-fluid" alt="Hero Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="col-lg-7">
+				<div class="hero-text-content">
+					<h2>Discover Our Latest Collections</h2>
+					<p>Explore high-quality furniture for every style and budget. Shop now <br>
+						 to transform your 
+						 living space!</p>
+					<a href="shop.html" class="btn btn-primary">Browse Collections</a>
+				  </div>
+				  
+			</div>
+			
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Hero Section -->
+
+                    <!-- Optional additional content here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <!-- Start Shop Section -->
+	 <center>
+	<div class="col-12">
+		<!-- Slider -->
+		<div class="tiny-slider-container">
+			<div class="my-slider">
+				<!-- Slide 1 -->
+
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/1.jpg" class="img-fluid" alt="Product 1">
+						<h3 class="product-title">YCY-012-1 Table Top</h3>
+						<p class="product-description">Table top: PE<br>Leg: plastic<br>Adjustable rectangular table<br>120*60*H48-60cm<br>4 red / 4 yellow / 4 blue / 4 green / 4 orange<br>20 Available</p>
+						<span class="product-price">$100.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 2 to Slide 20 -->
+				<!-- Repeat the same structure as above for each slide -->
+				<!-- Example for Slide 2 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/2.jpg" class="img-fluid" alt="Product 2">
+						<h3 class="product-title">YCY-073 Table Top</h3>
+						<p class="product-description">Table top: particle board, injected edge<br>Leg: steel<br>Adjustable steel leg table<br>R45.3*H40-60cm<br>11 red / 11 yellow / 11 blue / 11 green / 2 peak green / 4 orange<br>50 Available</p>
+						<span class="product-price">$150.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+
+				<!-- Continue for Slide 3 through Slide 20 -->
+				 <!-- Slide 2 -->
+				 <div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/2.jpg" class="img-fluid" alt="Product 2">
+						<h3 class="product-title">YCY-073 Table Top</h3>
+						<p class="product-description">Table top: particle board, injected edge<br>Leg: steel<br>Adjustable steel leg table<br>R45.3*H40-60cm<br>11 red / 11 yellow / 11 blue / 11 green / 2 peak green / 4 orange<br>50 Available</p>
+						<span class="product-price">$150.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 3 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/3.jpg" class="img-fluid" alt="Product 3">
+						<h3 class="product-title">YCY-073-beige Table Top</h3>
+						<p class="product-description">Table top: particle board, injected edge<br>Leg: steel<br>Adjustable steel leg table<br>R45.3*H40-60cm<br>Beige color as picture<br>5 Available</p>
+						<span class="product-price">$200.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 4 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/4.jpg" class="img-fluid" alt="Product 4">
+						<h3 class="product-title">YCY-074 Table Top</h3>
+						<p class="product-description">Table top: particle board, injected edge<br>Leg: steel<br>Adjustable steel leg table<br>R45.3*H40-60cm<br>11 red / 11 yellow / 11 blue / 11 green / 2 peak green / 4 orange<br>50 Available</p>
+						<span class="product-price">$250.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 5 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/5.jpg" class="img-fluid" alt="Product 5">
+						<h3 class="product-title">YCY-074 Table Top (Beige)</h3>
+						<p class="product-description">Table top: particle board, injected edge<br>Leg: steel<br>Adjustable steel leg table<br>R45.3*H40-60cm<br>Beige color as picture<br>5 Available</p>
+						<span class="product-price">$450.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 6 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/6.jpg" class="img-fluid" alt="Product 6">
+						<h3 class="product-title">YCY-093 Table Top</h3>
+						<p class="product-description">Table top: particle board, injected edge<br>Leg: steel<br>Adjustable steel leg table<br>90*75*H40-60cm<br>11 red / 11 yellow / 11 blue / 11 green / 2 peak green / 4 orange<br>50 Available</p>
+						<span class="product-price">$120.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 7 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/7.jpg" class="img-fluid" alt="Product 7">
+						<h3 class="product-title">YCX-036 PP Chair</h3>
+						<p class="product-description">PP Chair<br>30*30*H51/53/55cm<br>Height: H26/28/30cm<br>66 red / 65 yellow / 65 blue / 65 green / 33 peak green / 60 orange<br>354 Available</p>
+						<span class="product-price">$180.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 8 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/8.jpg" class="img-fluid" alt="Product 8">
+						<h3 class="product-title">YCX-036-2 Customized PP Chair</h3>
+						<p class="product-description">PP Chair<br>30*30*H51/53/55cm<br>Height: H26/28/30cm<br>Beige color frame and beam (same as YCX-036)<br>20 Available</p>
+						<span class="product-price">$220.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 9 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/9.jpg" class="img-fluid" alt="Product 9">
+						<h3 class="product-title">YCX-035 PP Chair</h3>
+						<p class="product-description">PP Chair<br>29.5*30*H52/54/56cm<br>Seat height: 26/28/30cm<br>66 red / 65 yellow / 65 blue / 65 green / 32 peak green / 61 orange<br>354 Available</p>
+						<span class="product-price">$600.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 10 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/10.jpg" class="img-fluid" alt="Product 10">
+						<h3 class="product-title">YCX-035-2 Customized PP Chair</h3>
+						<p class="product-description">PP Chair<br>29.5*30*H52/54/56cm<br>Seat height: 26/28/30cm<br>Beige color frame and beam (same as YCX-035)<br>20 Available</p>
+						<span class="product-price">$130.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 11 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/11.jpg" class="img-fluid" alt="Product 11">
+						<h3 class="product-title">YCY-083 Table Top</h3>
+						<p class="product-description">Table top: particle board with injected edge<br>Leg: plastic<br>Adjustable rectangular table with color top<br>120*60*H46-58cm<br>5 red / 5 yellow / 5 blue / 5 green<br>20 Available</p>
+						<span class="product-price">$320.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 12 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/12.jpg" class="img-fluid" alt="Product 12">
+						<h3 class="product-title">YCY-070 Table Top</h3>
+						<p class="product-description">Table top: particle board, injected edge<br>Leg: steel<br>Adjustable steel leg table<br>154*84*H40-60cm<br>15 red / 15 yellow / 15 blue / 15 green<br>60 Available</p>
+						<span class="product-price">$450.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 13 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/13.jpg" class="img-fluid" alt="Product 13">
+						<h3 class="product-title">YCY-077 Table Top</h3>
+						<p class="product-description">Table top: particle board with injected edge<br>Leg: plastic<br>Adjustable rectangular table<br>120*60*H48-60cm<br>4 red / 4 yellow / 4 blue / 4 green / 4 orange<br>20 Available</p>
+						<span class="product-price">$200.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 14 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/14.jpg" class="img-fluid" alt="Product 14">
+						<h3 class="product-title">YCY-087 Table Top</h3>
+						<p class="product-description">Table top: particle board with injected edge<br>Leg: plastic<br>Adjustable rectangular table<br>120*60*H48-60cm<br>5 red / 5 yellow / 5 blue / 5 green<br>20 Available</p>
+						<span class="product-price">$150.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 15 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/15.jpg" class="img-fluid" alt="Product 15">
+						<h3 class="product-title">YCY-056 Table Top</h3>
+						<p class="product-description">Table top: particle board with injected edge<br>Leg: plastic<br>Adjustable rectangular table<br>120*60*H48-60cm<br>4 red / 4 yellow / 4 blue / 4 green / 4 orange<br>30 Available</p>
+						<span class="product-price">$170.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 16 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/16.jpg" class="img-fluid" alt="Product 16">
+						<h3 class="product-title">YCY-090 Table Top</h3>
+						<p class="product-description">Table top: particle board with injected edge<br>Leg: steel<br>Adjustable rectangular table<br>120*60*H50-70cm<br>10 red / 10 yellow / 10 blue / 10 green<br>40 Available</p>
+						<span class="product-price">$260.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 17 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/17.jpg" class="img-fluid" alt="Product 17">
+						<h3 class="product-title">YCY-092 Table Top</h3>
+						<p class="product-description">Table top: particle board with injected edge<br>Leg: plastic<br>Adjustable square table<br>80*80*H50-70cm<br>8 red / 8 yellow / 8 blue / 8 green<br>32 Available</p>
+						<span class="product-price">$300.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 18 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/18.jpg" class="img-fluid" alt="Product 18">
+						<h3 class="product-title">YCY-080 Table Top</h3>
+						<p class="product-description">Table top: particle board with injected edge<br>Leg: steel<br>Adjustable round table<br>Diameter 90*H50-70cm<br>12 red / 12 yellow / 12 blue / 12 green<br>48 Available</p>
+						<span class="product-price">$340.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 19 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/19.jpg" class="img-fluid" alt="Product 19">
+						<h3 class="product-title">YCY-065 Table Top</h3>
+						<p class="product-description">Table top: particle board with injected edge<br>Leg: plastic<br>Adjustable hexagonal table<br>100*100*H45-60cm<br>6 red / 6 yellow / 6 blue / 6 green<br>24 Available</p>
+						<span class="product-price">$220.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+				</div>
+				<!-- Slide 20 -->
+				<div class="slider-item">
+					<div class="product-item">
+						<img src="./product images/20.jpg" class="img-fluid" alt="Product 20">
+						<h3 class="product-title">YCY-066 Table Top</h3>
+						<p class="product-description">Table top: particle board with injected edge<br>Leg: plastic<br>Adjustable oval table<br>100*60*H48-60cm<br>7 red / 7 yellow / 7 blue / 7 green<br>28 Available</p>
+						<span class="product-price">$190.00</span>
+						<a href="#" class="btn btn-primary">Add to Cart</a>
+					</div>
+			</div>
+		</center>
+			<!-- Navigation Buttons -->
+			<div class="my-slider-nav">
+				<button class="tns-prev">Prev</button>
+				<button class="tns-next">Next</button>
+			</div>
+		</div>
+	</div>
+	
+		
+		<!-- End Shop Section -->
+		
+<!-- End Shop Section -->
+
+	<!-- End Shop Section -->
+	<!-- Start Shop Section -->
+
+<!-- End Shop Section -->
+
+    <!-- End Shop Section -->
+
+    <!-- Start Footer -->
+     <!-- Start Footer -->
+	 <footer class="footer">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Pak Global Furniture<span>.</span></a></div>
+                    <p class="mb-4">Pak Global Furniture is dedicated to offering a diverse range of premium furniture pieces that combine style with functionality. Explore our collection designed to enhance your living space with quality craftsmanship.</p>
+                    <ul class="list-unstyled custom-social">
+                        <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row links-wrap">
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Knowledge base</a></li>
+                                <li><a href="#">Live chat</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">Our team</a></li>
+                                <li><a href="#">Leadership</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6
+
+    <!-- End Footer --!>
+
+    <!-- JavaScript Libraries --!>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="js/main.js"></script>
+
+  
+</body>
+<script>
+	
+document.addEventListener('DOMContentLoaded', function () {
+    var slider = tns({
+        container: '.my-slider',
+        items: 1, // Show 1 item per view
+        slideBy: 'page',
+        autoplay: true,
+        controls: true, // Display default controls
+        nav: true, // Display default navigation
+        autoplayButtonOutput: false, // Hide default autoplay button
+        responsive: {
+            640: {
+                items: 1 // Adjust the number of items for smaller screens if needed
+            }
+        }
+    });
+});
+
+
+  var slider = tns({
+    container: '.my-slider',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    controls: true, // Show default controls
+    nav: false, // Hide default navigation dots
+    prevButton: '.tns-prev',
+    nextButton: '.tns-next',
+    autoplayButton: false,
+    autoplayButtonOutput: false
+  });
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
+
+</html>

@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="./logo.png.png">
+    <meta name="description" content="Pak Global Trades - House of Furniture offers a wide range of premium quality furniture for your home. Explore our collection and find the perfect pieces to enhance your interior design." />
+    <meta name="keywords" content="furniture, interior design, home decor, Pak Global Trades" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/tiny-slider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Pak Global Trades - House of Furniture</title>
+    <style>
+        /* Existing styles */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1rem; /* Adjust font size if needed */
+        }
+
+        .logo-icon {
+            margin-right: 10px; /* Adjust spacing between logo and text */
+            width: 40px; /* Adjust logo size if needed */
+        }
+
+        .house-of-furniture {
+            display: block;
+            font-size: 0.9rem; /* Adjust font size if needed */
+            color: #e18282; /* Adjust text color if needed */
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 50px 0;
+            background-color: #040507; /* Adjust background color if needed */
+        }
+
+        .hero-img-wrap img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-section .card-img-top {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .we-help-section .imgs-grid {
+            display: flex;
+            gap: 10px; /* Adjust spacing between images if needed */
+        }
+
+        .we-help-section .imgs-grid .grid {
+            flex: 1;
+        }
+
+        .footer {
+            background-color: black; /* Light background color */
+            padding: 40px 0; /* Increased padding for better spacing */
+        }
+
+        .footer-logo-wrap .footer-logo {
+            font-size: 1.75rem; /* Slightly larger font size for the logo */
+            font-weight: bold;
+            color: #333; /* Darker color for better contrast */
+        }
+
+        .footer-logo-wrap .footer-logo span {
+            color: #e18282; /* Accent color */
+        }
+
+        .footer p {
+            font-size: 0.875rem; /* Slightly smaller font size for the paragraph */
+            color: #666; /* Lighter text color */
+        }
+
+        .custom-social a {
+            color: #333; /* Dark color for social icons */
+            font-size: 1.25rem; /* Larger icons */
+            margin-right: 10px; /* Spacing between icons */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .custom-social a:hover {
+            color: #e18282; /* Accent color on hover */
+        }
+
+        .links-wrap ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .links-wrap ul li {
+            margin-bottom: 10px; /* Spacing between list items */
+        }
+
+        .links-wrap ul li a {
+            color: #333; /* Dark color for links */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .links-wrap ul li a:hover {
+            color: #e18282; /* Accent color on hover */
+        }
+
+        .border-top {
+            border-top: 1px solid #ddd; /* Light border for separation */
+            padding-top: 20px;
+        }
+
+        .copyright p {
+            font-size: 0.875rem;
+            color: #666; /* Lighter text color */
+            margin-bottom: 0;
+        }
+
+        .copyright a {
+            color: #333; /* Dark color for links */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .copyright a:hover {
+            color: #e18282; /* Accent color on hover */
+        }
+
+        @media (max-width: 767px) {
+            .footer-logo-wrap .footer-logo {
+                font-size: 1.5rem; /* Smaller font size on smaller screens */
+            }
+
+            .custom-social a {
+                font-size: 1.1rem; /* Smaller icons on smaller screens */
+            }
+        }
+
+        /* New Slider Styles */
+        .tiny-slider-container {
+            position: relative;
+        }
+
+        .tiny-slider {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .slider-item {
+            margin-right: 15px; /* Adjust space between slides */
+            flex: 0 0 auto;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-title {
+            font-size: 1.125rem;
+            margin: 10px 0;
+        }
+
+        .product-description {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #e18282;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .btn-primary {
+            background-color: #e18282;
+            border-color: #e18282;
+        }
+
+        .btn-primary:hover {
+            background-color: #c75959;
+            border-color: #c75959;
+        }
+
+        .custom-prev,
+        .custom-next,
+        .custom-play-pause {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #e18282;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .custom-prev {
+            left: 10px;
+        }
+
+        .custom-next {
+            right: 10px;
+        }
+
+        .custom-play-pause {
+            right: 50%;
+            transform: translateY(-50%) translateX(50%);
+        }
+        
+.logo-icon {
+    margin-right: 10px; /* Adjust spacing between logo and text */
+    width: 370px; /* Adjust logo size if needed */
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Start Header/Navigation -->
+    <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Pak Global Trades navigation bar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- Placeholder for logo icon -->
+                <img src="logo.png.png" alt="Pak Global Trades Logo" class="logo-icon" width="45px">
+              
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li><a class="nav-link" href="about.html">About Us</a></li>
+                    <li><a class="nav-link" href="services.html">Services</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" href="#"><img src="images/user.svg" alt="User Icon"></a></li>
+                    <li><a class="nav-link" href="cart.html"><img src="images/cart.svg" alt="Cart Icon"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Header/Navigation -->
+
+    <!-- Start Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>Modern Interior <span class="d-block">Design Studio</span></h1>
+                        <p class="mb-4">Pak Global Trades offers a premium selection of furniture designed to elevate your home. Discover quality and style in every piece.</p>
+                        <p><a href="shop.html" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="hero-img-wrap">
+                        <img src="images/couch.png" class="img-fluid" alt="Stylish Couch">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <!-- Start Product Slider Section -->
+    <div class="product-slider-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Featured Products</h2>
+            <div class="tiny-slider-container">
+                <div class="tiny-slider">
+                    <div class="slider-item">
+                        <div class="product-item">
+                            <img src="product images/product-1 (2).png" alt="Product 1">
+                            <div class="product-description">
+                                <span class="product-price">$299.99</span>
+                                <h3 class="product-title">Elegant Sofa</h3>
+                                <p class="product-description">A beautifully crafted sofa with luxurious upholstery.</p>
+                                <a href="product.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="product-item">
+                            <img src="product images/product-2.png" alt="Product 2">
+                            <div class="product-description">
+                                <span class="product-price">$199.99</span>
+                                <h3 class="product-title">Modern Chair</h3>
+                                <p class="product-description">Stylish and comfortable chair for any living space.</p>
+                                <a href="product.html" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    </div>
+                    <!-- Add more items as needed -->
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!-- End Product Slider Section -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Pak Global Furniture<span>.</span></a></div>
+                    <p class="mb-4">Pak Global Furniture is dedicated to offering a diverse range of premium furniture pieces that combine style with functionality. Explore our collection designed to enhance your living space with quality craftsmanship.</p>
+                    <ul class="list-unstyled custom-social">
+                        <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="row links-wrap">
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Knowledge base</a></li>
+                                <li><a href="#">Live chat</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">Our team</a></li>
+                                <li><a href="#">Leadership</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-6
